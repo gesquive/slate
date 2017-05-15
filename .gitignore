@@ -1,0 +1,7 @@
+.node-local/
+node_modules/
+bin/
+yarn/
+data/
+build/
+vendor/

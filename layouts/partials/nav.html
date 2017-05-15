@@ -1,0 +1,8 @@
+<div class="nav-panel">
+    <nav>
+        <ul>
+            <li class="tag"><a data-tooltip="all" href="#"><i class="icon fa fa-th" aria-hidden="true"></i></a></li>
+{{ range .Site.Data.nav.tags }}            {{ partial "nav_item.html" . }}{{- end }}
+        </ul>
+    </nav>
+</div>

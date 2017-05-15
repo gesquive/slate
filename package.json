@@ -1,0 +1,34 @@
+{
+  "name": "slate",
+  "version": "1.0.0",
+  "description": "A speed-dial like site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gus Esquivel",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-hash": "^4.1.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.8",
+    "gulp-webserver": "^0.9.1",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "shufflejs": "^4.1.1",
+    "tinycolor2": "^1.4.1"
+  }
+}

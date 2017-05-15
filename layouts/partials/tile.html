@@ -1,0 +1,10 @@
+<a class="tile tile-link" href="{{ .url }}" data-groups='{{ if .tags }}{{ delimit .tags "," }}{{ end }}'>
+    <div class="tile-box"
+        data-title='{{ .name }}'
+        data-url='{{ .url }}'
+        {{ if .bg_color }}data-bg-color='{{ .bg_color }}'{{ end -}}
+        {{ if .txt_color }}data-txt-color='{{ .txt_color }}'{{ end -}}
+        {{ if .img }}data-img='{{ .img }}'{{ end -}}>
+        {{ if .img }}<img class="logo" src="{{ .img }}"></img>{{ else }}{{ .name }}{{ end }}</div>
+    <div class="tile-title">{{ .name }}</div>
+</a>

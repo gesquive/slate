@@ -1,0 +1,271 @@
+// Slate CSS
+
+$tile-width: 188px;
+$tile-height: 120px;
+$tile-spacing: 16px;
+$title-height: 16px;
+$transition-time: .3s;
+
+$menu-bar-width: 50px;
+
+$background: #bdbdbd;
+$text-color: #000;
+$text-title-color: #fff;
+
+
+body {
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo', sans-serif;
+    font-weight: bold;
+    background-color: $background;
+    margin-left: 50px;
+    color: $text-color;
+}
+
+.container {
+    box-sizing: border-box;
+    min-height: 10px;
+    padding: 48px 0;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+}
+
+@mixin min-width($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+
+.tile-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    min-width: calc(#{$tile-width} + #{$tile-spacing});
+
+    @for $i from 1 through 12 {
+        @include min-width((($tile-width + $tile-spacing) * ($i + 1))) {
+            width: (($tile-width + $tile-spacing) * $i);
+        }
+    }
+}
+
+.tile {
+    width: $tile-width;
+    max-width: $tile-width;
+    padding: 8px;
+    -webkit-flex: 0 0 188px;
+	flex: 0 0 188px;
+    transition: top 0.3s, left 0.3s, opacity 0.3s;
+}
+
+.tile-box {
+    height: $tile-height;
+    max-height: $tile-height;
+    width: $tile-width;
+    max-width: $tile-width;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 2px 8px hsla(0, 0%, 0%, 0.2);
+    box-sizing: border-box;
+    background: rgba(255,255,255,.8);
+    font-size: 28px;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+}
+
+.tile-link {
+    color: $text-color;
+    text-decoration: none;
+}
+
+.tile-title {
+    display: block;
+    width: $tile-width;
+    background-color: transparent;
+    box-sizing: border-box;
+    color: $text-title-color;
+    display: block;
+    height: 32px;
+    line-height: 16px;
+    overflow: hidden;
+    padding: 8px;
+    text-align: center;
+    text-overflow: ellipsis;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+.logo {
+    max-width:170;
+    max-height:100px;
+    width: auto;
+    height: auto;
+}
+
+// ===========================================================================
+// nav menu
+
+.nav-panel {
+    /*background-image: linear-gradient(hsla(0, 0%, 0%, .2), hsla(0, 0%, 0%, .2));*/
+    background: rgba(0,0,0,.1);
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    /*transition: background-image 3s;*/
+	transition: all 0.8s ease-in-out;
+    transition-delay: 1s;
+    width: 50px;
+}
+
+.nav-panel:hover {
+    /*background-image: linear-gradient(hsla(0, 0%, 0%, .5), hsla(0, 0%, 0%, .5));*/
+    background: rgba(0,0,0,.5);
+    transition: background .5s ease-in-out;
+}
+
+nav {
+    box-sizing: border-box;
+    display: block;
+    height: 100%;
+    padding: 7px 4px 4px;
+    width: 50px;
+    -webkit-user-select: none;
+    color: #fff;
+
+    ul {
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    ul::after {
+        content: '';
+        display: list-item;
+        flex: 1;
+        order: 2;
+    }
+
+    li {
+        height: 40px;
+        padding: 10px 0 0 0;
+        position: relative;
+        order: 1;
+        transition: height $transition-time;
+        text-align: center;
+
+        a {
+            color: #FFF;
+            text-decoration: none;
+        }
+    }
+}
+
+.icon {
+  display: block;
+  opacity: .6;
+  transition: background-color $transition-time,
+              opacity $transition-time,
+              -webkit-mask-size $transition-time;
+  -webkit-mask-position: 50% 15px;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 23px;
+}
+
+.icon:hover {
+    opacity: 1;
+}
+
+// ===========================================================================
+// text tile parts
+
+.pre-domain, .post-domain {
+    font-size: 10px;
+    position: absolute;
+    text-shadow:
+       -1px 0 rgba(255,255,255,.8),
+        0 1px rgba(255,255,255,.8),
+        1px 0 rgba(255,255,255,.8),
+        0 -1px rgba(255,255,255,.8);
+}
+
+.pre-domain {
+    top: 5px;
+    left: 0px;
+}
+
+.post-domain {
+    top: 40px;
+    right: 0px;
+}
+
+// ===========================================================================
+// nav menu tooltips
+
+*[data-tooltip] {
+    position: relative;
+}
+
+*[data-tooltip]::after {
+    content: attr(data-tooltip);
+
+    position: absolute;
+    top: -20px;
+    left: 30px;
+
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transition: opacity .15s ease-in-out;
+    -moz-transition: opacity .15s ease-in-out;
+    -ms-transition: opacity .15s ease-in-out;
+    -o-transition: opacity .15s ease-in-out;
+    transition: opacity .15s ease-in-out;
+
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2px 2px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+*[data-tooltip]:hover::after {
+    opacity: 1;
+}
+
+// ===========================================================================
+// background image rotation
+
+body {
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+    background-blend-mode: darken;
+	-webkit-transition: background 1.4s linear;
+	-moz-transition: background 1.4s linear;
+	-ms-transition: background 1.4s linear;
+	-o-transition: background 1.4s linear;
+	transition: background 1.4s linear;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-attachment: fixed;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>slate</title>
+    <link rel="stylesheet" href="css/slate.css">
+</head>
+
+<body>
+
+{{ partial "nav.html" . }}
+
+<div class="container">{{ partial "tile_slate.html" . }}
+</div>
+
+{{ if .Site.Data.page.backgrounds -}}
+<background data-backgrounds='{{ range .Site.Data.page.backgrounds }}
+            {{ . }},{{ end }}
+            '>
+{{- end }}
+
+</body>
+<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+<script src="js/slate.js"></script>
+</html>

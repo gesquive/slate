@@ -1,0 +1,13 @@
+
+name = "Slate"
+license = "MIT"
+licenselink = "https://github.com/gesquive/slate/blob/master/LICENSE.md"
+description = "A speed dial theme"
+homepage = "http://github.com/gesquive/slate"
+tags = []
+features = []
+min_version = "0.20"
+
+[author]
+  name = "Gus Esquivel"
+  homepage = "https://github.com/gesquive"
