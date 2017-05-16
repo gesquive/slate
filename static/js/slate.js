@@ -3463,7 +3463,7 @@ var renderTiles = function() {
 renderTiles();
 
 var getBackgroundImages = function() {
-    var backgrounds = document.getElementsByTagName("background");
+    var backgrounds = document.getElementsByTagName("body");
     var images = [];
     if (backgrounds.length > 0) {
         var imgString = backgrounds[0].getAttribute("data-backgrounds");

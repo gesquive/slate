@@ -1,21 +1,16 @@
 <html>
 <head>
-    <title>slate</title>
+    <title>{{ .Title }}</title>
     <link rel="stylesheet" href="css/slate.css">
 </head>
 
-<body>
+<body{{ if .Site.Params.BackgroundStyle }} style='{{ .Site.Params.BackgroundStyle | safeCSS }}'{{ end }}
+{{- if .Site.Params.BackgroundImages }} data-backgrounds='{{ range .Site.Params.BackgroundImages }}{{ . }},{{ end }}'{{- end }}>
 
 {{ partial "nav.html" . }}
 
 <div class="container">{{ partial "tile_slate.html" . }}
 </div>
-
-{{ if .Site.Data.page.backgrounds -}}
-<background data-backgrounds='{{ range .Site.Data.page.backgrounds }}
-            {{ . }},{{ end }}
-            '>
-{{- end }}
 
 </body>
 <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
