@@ -22,6 +22,8 @@ body {
     background-color: $background;
     margin-left: 50px;
     color: $text-color;
+    background-image: radial-gradient(ellipse farthest-side at center top, #FCFCFC 0%, #657383 100%);
+
 }
 
 .container {
