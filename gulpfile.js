@@ -44,7 +44,10 @@ gulp.task('pack-js', function () {
 });
 
 gulp.task('pack-css', function () {
-    return gulp.src([scssVnd + '/**/*.[s]?css', scssSrc + '/**/*.[s]?css'])
+    return gulp.src([scssVnd + '/**/*.css',
+                     scssVnd + '/**/*.scss',
+                     scssSrc + '/**/*.css',
+                     scssSrc + '/**/*.scss'])
         .pipe(sass({
           outputStyle: 'compressed',
           errLogToConsole: true
