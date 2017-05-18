@@ -54,15 +54,22 @@ icon = "star"      # font-awesome icon name
 
 ```
 
-Example : [config.toml](https://github.com/gesquive/slate/blob/master/config.toml)
+Example : [config.toml](https://github.com/gesquive/hugo-slate-demo/blob/master/config.toml)
 
 ## Links
 
-All links are defined in the `data/links.yml` data file.
+All links are defined in the `data/links.yml` data file. Valid attributes are:
+
+- **name**: the name displayed below the tile
+- **url**: the url href, also used for text when no img is specified
+- **tags**: (_optional_) list of tags to apply to this tile
+- **img**: (_optional_) path to tile image, this will replace any text in the tile
+-  **txt_color**: (_optional_) css used to set the [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) of a tile, a random value is chosen if none is specified
+- **bg_color**: (_optional_) css used to set the [`background-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color) of a tile.
 
 Example of link definitions in the data file.
 
-``` yml
+``` yaml
 tiles:
 -
   name: 'google'
@@ -109,8 +116,7 @@ tiles:
   img: 'pandora.svg'
   bg_color: '#005483'
   txt_color: '#ffffff'
-  # tags: ['music']
-
+  tags: ['music']
 ```
 
 ## Navigation
@@ -145,5 +151,4 @@ icon = "shopping-basket"
 name = "music"
 tag = "music"
 icon = "headphones"
-
 ```
