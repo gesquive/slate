@@ -43,6 +43,8 @@ BackgroundImages = [
 ]
 # optional background style (valid css only)
 BackgroundStyle = "background: #000000;"
+# optional bool to have links open in a new window/tab (default: true)
+OpenLinksInNewWindow = true
 
 # list of nav tags
 [[ params.nav ]]

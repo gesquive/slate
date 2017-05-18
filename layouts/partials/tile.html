@@ -1,10 +1,10 @@
-<a class="tile tile-link" href="{{ .url }}" data-groups='{{ if .tags }}{{ delimit .tags "," }}{{ end }}'>
+<a class="tile tile-link" href="{{ .Link.url }}" data-groups='{{ if .Link.tags }}{{ delimit .Link.tags "," }}{{ end }}'{{ if .Jump }} target="_blank"{{ end }}>
     <div class="tile-box"
-        data-title='{{ .name }}'
-        data-url='{{ .url }}'
-        {{ if .bg_color }}data-bg-color='{{ .bg_color }}'{{ end -}}
-        {{ if .txt_color }}data-txt-color='{{ .txt_color }}'{{ end -}}
-        {{ if .img }}data-img='{{ .img }}'{{ end -}}>
-        {{ if .img }}<img class="logo" src="{{ .img }}"></img>{{ else }}{{ .name }}{{ end }}</div>
-    <div class="tile-title">{{ .name }}</div>
+        data-title='{{ .Link.name }}'
+        data-url='{{ .Link.url }}'
+        {{ if .Link.bg_color }}data-bg-color='{{ .Link.bg_color | safeCSS }}'{{ end -}}
+        {{ if .Link.txt_color }}data-txt-color='{{ .Link.txt_color | safeCSS }}'{{ end -}}
+        {{ if .Link.img }}data-img='{{ .Link.img }}'{{ end -}}>
+        {{ if .Link.img }}<img class="logo" src="{{ .Link.img }}"></img>{{ else }}{{ .Link.name }}{{ end }}</div>
+    <div class="tile-title">{{ .Link.name }}</div>
 </a>
