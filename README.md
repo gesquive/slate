@@ -1,7 +1,7 @@
 # slate theme for hugo
 
 
-slate is a single-page speed dial theme for [Hugo](http://gohugo.io/).
+slate is a single-page speed dial theme for [Hugo](http://gohugo.io/). You can view a demo at https://gesquive.github.io/hugo-slate-demo/
 
 ![slate hugo theme screenshot](https://raw.githubusercontent.com/gesquive/slate/master/images/screenshot.png)
 
