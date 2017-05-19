@@ -1,6 +1,7 @@
 <html>
 <head>
-    <title>{{ .Title }}</title>
+    <title>{{ .Title }}</title>{{ if .Site.Params.Favicon }}
+    <link rel="shortcut icon" href="{{ .Site.Params.Favicon }}">{{ end }}
     <link rel="stylesheet" href="css/slate.css">
 </head>
 
