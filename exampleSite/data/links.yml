@@ -1,0 +1,101 @@
+tiles:
+-
+  name: "google"
+  url: "https://google.com"
+  img: "logos/google.svg"
+  tags: ["favorite", "search"]
+-
+  name: "bing"
+  url: "https://bing.com"
+  img: "logos/bing.svg"
+  txt_color: "#ffffff"
+  bg_color: "#ffb900"
+  tags: ["search"]
+-
+  name: "amazon"
+  url: "https://amazon.com"
+  img: "logos/amazon.svg"
+  bg_color: "#ffffff"
+  txt_color: "#ff9900"
+  tags: ["favorite", "shopping"]
+-
+  name: "reddit"
+  url: "https://reddit.com"
+  img: "logos/reddit.svg"
+  bg_color: "#5f99cf"
+  txt_color: "#ffffff"
+-
+  name: "spotify"
+  url: "https://web.spotify.com"
+  img: "logos/spotify.svg"
+  bg_color: "#191414"
+  txt_color: "#1db954"
+  tags: ["favorite", "music"]
+-
+  name: "google music"
+  url: "https://play.google.com/music/listen"
+  img: "logos/google-music.png"
+  bg_color: "#ffffff"
+  txt_color: "#ff5722"
+  tags: ["music"]
+-
+  name: "pandora"
+  url: "https://pandora.com"
+  img: "logos/pandora.svg"
+  bg_color: "#005483"
+  txt_color: "#ffffff"
+  tags: ["music"]
+-
+  name: "soundcloud"
+  url: "https://soundcloud.com"
+  img: "logos/soundcloud.svg"
+  bg_color: "#ffffff"
+  txt_color: "#ff3300"
+  tags: ["music"]
+-
+  name: "wikipedia"
+  url: "https://wikipedia.org"
+  img: "logos/wikipedia.svg"
+  bg_color: "#ffffff"
+  txt_color: "#000000"
+-
+  name: "ebay"
+  url: "https://ebay.com"
+  img: "logos/ebay.svg"
+  bg_color: "#ffffff"
+  txt_color: "#000000"
+  tags: ["shopping"]
+-
+  name: "twitter"
+  url: "https://twitter.com"
+  img: "logos/twitter.svg"
+  bg_color: "#1da1f2"
+  txt_color: "#f5f8fa"
+-
+  name: "twitch"
+  url: "https://twitch.com"
+  img: "logos/twitch.svg"
+  bg_color: "#f1f1f1"
+  txt_color: "#6441a5"
+  tags: ["video"]
+-
+  name: "youtube"
+  url: "https://youtube.com"
+  img: "logos/youtube.svg"
+  bg_color: "#ffffff"
+  txt_color: "#cd201f"
+  tags: ["video"]
+-
+  name: "netflix"
+  url: "https://netflix.com"
+  img: "logos/netflix.svg"
+  bg_color: "#221f1f"
+  txt_color: "#e50914"
+  tags: ["video"]
+
+-
+  name: "imgur"
+  url: "https://imgur.com"
+  img: "logos/imgur.svg"
+  bg_color: "#ffffff"
+  txt_color: "#85bf25"
