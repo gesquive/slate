@@ -7,7 +7,8 @@ slate is a single-page speed dial theme for [Hugo](http://gohugo.io/).
 
 # Features
  - Rotating image background
- - Image and text tile display mode
+ - [Image](https://raw.githubusercontent.com/gesquive/slate/master/images/icon_tiles.png) and [Text](https://raw.githubusercontent.com/gesquive/slate/master/images/text_tiles.png) tile display mode
+ - Tag based navigation/filtering
 
 
 # Installation
@@ -16,7 +17,7 @@ slate is a single-page speed dial theme for [Hugo](http://gohugo.io/).
 
     mkdir themes
     cd themes
-    git clone https://github.com/gesqyuve/slate
+    git clone https://github.com/gesquive/slate
 
 ## Build with this theme
 
