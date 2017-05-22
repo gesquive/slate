@@ -1,29 +1,40 @@
 # slate theme for hugo
 
 
-slate is a single-page speed dial theme for [Hugo](http://gohugo.io/). You can view a demo at https://gesquive.github.io/hugo-slate-demo/
+slate is a single-page speed dial theme for [Hugo](http://gohugo.io/). Supports using image logos or url text for the contents of the tiles.
 
-![slate hugo theme screenshot](https://raw.githubusercontent.com/gesquive/slate/master/images/screenshot.png)
 
-# Features
+## Examples
+
+You can visit a live demo at https://gesquive.github.io/hugo-slate-demo/ or view
+screen shots of the [Image](https://raw.githubusercontent.com/gesquive/slate/master/images/icon_tiles.png) and [Text](https://raw.githubusercontent.com/gesquive/slate/master/images/text_tiles.png) tile display modes.
+
+## Features
  - Rotating image background
  - [Image](https://raw.githubusercontent.com/gesquive/slate/master/images/icon_tiles.png) and [Text](https://raw.githubusercontent.com/gesquive/slate/master/images/text_tiles.png) tile display mode
  - Tag based navigation/filtering
 
 
-# Installation
+## Installation
 
-## Installing this theme
+### Installing this theme
 
     mkdir themes
     cd themes
     git clone https://github.com/gesquive/slate
 
-## Build with this theme
+### Build with this theme
 
     hugo server -t slate
 
-# Configuration
+## Configuration
+
+The following configuration site params are available:
+
+- **BackgroundImages**: (_optional_) specifies a list of backgrounds to rotate through, if not provided, then the specified background style will be used
+- **BackgroundStyle**: (_optional_) The [background CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/background) style to use. (default value is `radial-gradient(ellipse farthest-side at center top, #FCFCFC 0%, #657383 100%)`)
+- **OpenLinksInNewWindow**: (_optional_) boolean to set if tile links open in a new window/tab. (default values is `false`)
+- **Favicon**: (_optional_) path to the favicon
 
 **config.toml**
 
@@ -34,7 +45,6 @@ title = "My New Hugo Site"
 theme = "slate"
 
 [ params ]
-# optional image background rotation
 BackgroundImages = [
   "bg/b1920-000.jpg",
   "bg/b1920-001.jpg",
@@ -42,24 +52,21 @@ BackgroundImages = [
   "bg/b1920-003.jpg",
   "bg/b1920-004.jpg"
 ]
-# optional background style (valid css only)
-BackgroundStyle = "background: #000000;"
-# optional bool to have links open in a new window/tab (default: true)
+BackgroundStyle = "#000000;"
 OpenLinksInNewWindow = true
-# optional path to favicon
 Favicon = "favicon.ico"
 
 # list of nav tags
 [[ params.nav ]]
-name = "favorites" # display name
-tag = "favorite"   # url/tag name
-icon = "star"      # font-awesome icon name
+name = "favorites"
+tag = "favorite"
+icon = "star"
 
 ```
 
 Example : [config.toml](https://github.com/gesquive/hugo-slate-demo/blob/master/config.toml)
 
-## Links
+### Links
 
 All links are defined in the `data/links.yml` data file. Valid attributes are:
 
@@ -122,11 +129,12 @@ tiles:
   tags: ['music']
 ```
 
-## Navigation
+### Navigation
 
 Along the left side of the screen is a navigation bar that can be used to filter the links. The filtering occurs on the tag attribute of the links. For example, when the 'favorite' tag is selected, only the links with the 'favorite' tag attribute will be shown.
 
 A nav filter is defined as:
+
 - **name**: The name displayed in the UI
 - **tag**: the tag name to filter links with
 - **icon**: the [font-awesome](http://fontawesome.io/icons/) name of the icon to display

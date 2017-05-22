@@ -8,7 +8,7 @@ $transition-time: .3s;
 
 $menu-bar-width: 50px;
 
-$background: #bdbdbd;
+$background: #657383;
 $text-color: #000;
 $text-title-color: #fff;
 
@@ -23,7 +23,6 @@ body {
     margin-left: 50px;
     color: $text-color;
     background-image: radial-gradient(ellipse farthest-side at center top, #FCFCFC 0%, #657383 100%);
-
 }
 
 .container {

@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="css/slate.css">
 </head>
 
-<body{{ if .Site.Params.BackgroundStyle }} style='{{ .Site.Params.BackgroundStyle | safeCSS }}'{{ end }}
+<body{{ if .Site.Params.BackgroundStyle }} style='background: {{ .Site.Params.BackgroundStyle | safeCSS }};'{{ end }}
 {{- if .Site.Params.BackgroundImages }} data-backgrounds='{{ range .Site.Params.BackgroundImages }}{{ . }},{{ end }}'{{- end }}>
 
 {{ partial "nav.html" . }}
