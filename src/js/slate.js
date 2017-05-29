@@ -231,7 +231,7 @@ var renderPlainTile = function(tile) {
 
 
     domainDiv.appendChild(beforeDiv);
-    domainDiv.append(urlParts.domain);
+    domainDiv.appendChild(document.createTextNode(urlParts.domain));
     domainDiv.appendChild(afterDiv);
 
     var top = (boxHeight + margin)/2 - domainDiv.clientHeight/2;
