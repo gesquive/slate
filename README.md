@@ -70,7 +70,7 @@ Example : [config.toml](https://github.com/gesquive/hugo-slate-demo/blob/master/
 
 All links are defined in the `data/links.yml` data file. Valid attributes are:
 
-- **name**: the name displayed below the tile
+- **name**: the name displayed below the tile, also used as tile text if javascript is disabled in the client browser.
 - **url**: the url href, also used for text when no img is specified
 - **tags**: (_optional_) list of tags to apply to this tile
 - **img**: (_optional_) path to tile image, this will replace any text in the tile
