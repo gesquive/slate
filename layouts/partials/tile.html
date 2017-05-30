@@ -4,7 +4,8 @@
         data-url='{{ .Link.url }}'
         {{ if .Link.bg_color }}data-bg-color='{{ .Link.bg_color | safeCSS }}'{{ end -}}
         {{ if .Link.txt_color }}data-txt-color='{{ .Link.txt_color | safeCSS }}'{{ end -}}
-        {{ if .Link.img }}data-img='{{ .Link.img }}'{{ end -}}>
+        {{ if .Link.img }}data-img='{{ .Link.img }}'{{ end -}}
+        {{ if or .Link.bg_color .Link.txt_color }}style='{{ if .Link.bg_color }}background-color:{{ .Link.bg_color | safeCSS }};{{ end }} {{ if .Link.txt_color }}color:{{ .Link.txt_color | safeCSS }}{{end}}'{{ end -}}>
         {{ if .Link.img }}<img class="logo" src="{{ .Link.img }}"></img>{{ else }}{{ .Link.name }}{{ end }}</div>
     <div class="tile-title">{{ .Link.name }}</div>
 </a>
