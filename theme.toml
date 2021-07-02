@@ -4,6 +4,7 @@ license = "MIT"
 licenselink = "https://github.com/gesquive/slate/blob/master/LICENSE.md"
 description = "A speed dial theme"
 homepage = "http://github.com/gesquive/slate"
+demosite="https://gesquive.github.io/hugo-slate-demo/"
 tags = ["speed-dial", "single-page"]
 features = []
 min_version = "0.20"
