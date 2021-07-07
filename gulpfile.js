@@ -57,20 +57,24 @@ gulp.task('pack-css', function () {
    .pipe(gulp.dest(scssDst));
 });
 
-gulp.task('vendor', function () {
-    // del([scssDst + '/font-awesome.*', fontDst]);
-    gulp.src(['./node_modules/font-awesome/css/font-awesome.css'])
+gulp.task('vendor', ['vendor-css', 'vendor-font', 'vendor-js']);
+
+gulp.task('vendor-css', function() {
+  return gulp.src(['./node_modules/font-awesome/css/font-awesome.css'])
         .pipe(gulp.dest(scssVnd));
-
-    gulp.src(['./node_modules/font-awesome/fonts/*'])
-        .pipe(gulp.dest(fontDst));
-
-    gulp.src(['./node_modules/shufflejs/dist/shuffle.js'])
-        .pipe(gulp.dest(jsVnd));
-
-    gulp.src(['./node_modules/tinycolor2/tinycolor.js'])
-        .pipe(gulp.dest(jsVnd));
 });
+
+gulp.task('vendor-font', function() {
+  return gulp.src(['./node_modules/font-awesome/fonts/*'])
+        .pipe(gulp.dest(fontDst));
+})
+
+gulp.task('vendor-js', function() {
+  return gulp.src([
+    './node_modules/shufflejs/dist/shuffle.js',
+    './node_modules/tinycolor2/tinycolor.js'
+  ]).pipe(gulp.dest(jsVnd));
+});;
 
 // configure which files to watch and what tasks to use on file changes
 gulp.task('watch', function() {
